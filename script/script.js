@@ -5,6 +5,9 @@ document.getElementById("minuti").innerHTML = tempo.getMinutes();
 document.getElementById("secondi").innerHTML = tempo.getSeconds();
 let tempoIta = new Date();
 document.getElementById("data-italiana").innerHTML = tempoIta.toLocaleString("it-IT");
-document.getElementById(
-  "solo-data"
-).innerHTML = `${tempoIta.getDay()}:${tempoIta.getMonth()}:${tempoIta.getFullYear()}`;
+
+let data = new Date();
+let dataIta = data.toLocaleDateString("it-IT");
+document.getElementById("solo-data").innerHTML = dataIta;
+
+// `${data.getDay()}:${data.getMonth()}:${data.getFullYear()}`;
